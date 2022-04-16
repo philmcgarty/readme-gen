@@ -27,7 +27,7 @@ const questions = [
         message: 'Provide instructions for use?' // ask about this
     },
     {
-        type: 'checkbox',
+        type: 'list',
         name: 'license',
         message: 'Choose a license type:',
         choices: ['GPL','Apache','Ms-PL','BSD','CDDL','EPL','MIT'] // ask about this
@@ -55,14 +55,27 @@ const questions = [
 ];
 
 // TODO: Create a function to write README file
-function writeToFile(fileName, data) {}
+function writeToFile(fileName, data) {
+    
+    fs.writeFile(fileName, data, err =>{
+        if (err){
+            console.log(err);
+            return;
+        }
+
+        console.log('README file created')
+    })
+}
 
 // TODO: Create a function to initialize app
 function init() {
     return inquirer.prompt(questions)
     .then(data => {
-        generateMarkdown(data);
-
+        
+        return generateMarkdown(data);
+    })
+    .then(markdownText =>{
+        writeToFile('./dist/README.md', markdownText)
     });
     
 };
