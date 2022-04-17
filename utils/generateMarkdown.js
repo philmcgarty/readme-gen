@@ -1,8 +1,9 @@
-// TODO: Create a function that returns a license badge based on which license is passed in
+// Function that returns a license badge based on which license is passed in
 // If there is no license, return an empty string
 function renderLicenseBadge(license) {
+  // var to hold badge info for end of hyperlink
   let badge = "";
-
+  // switch statement based on license type chosen
   switch(license){
     case "GPL":
       badge = "GPL-brightgreen";
@@ -25,18 +26,19 @@ function renderLicenseBadge(license) {
     case "MIT":
       badge = "MIT-blue";
       break;
-    default:
+    default: // if user managed to not enter a license an empty string is returned
       badge = "";
   }
   return badge;
-}
+};
 
 
-// TODO: Create a function that returns the license link
+// Function that returns the license link
 // If there is no license, return an empty string
 function renderLicenseLink(license) {
+  // var to hold relevant hyperlink for license info
   let link = "";
-
+  // switch statement based on license type chosen
   switch(license){
     case "GPL":
       link = "https://opensource.org/licenses/GPL-3.0";
@@ -59,18 +61,19 @@ function renderLicenseLink(license) {
     case "MIT":
       link = "https://opensource.org/licenses/MIT";
       break;
-    default:
+    default: // if user managed to not enter a license an empty string is returned
       link = "";
   }
   return link;
 };
 
 
-// TODO: Create a function that returns the license section of README
+// Function that returns the license section of README
 // If there is no license, return an empty string
 function renderLicenseSection(license) {
+  // var to hold relevant text for license info
   let text = "";
-
+  // switch statement based on license type chosen
   switch(license){
     case "GPL":
       text = "GNU General Public License (GPL)";
@@ -96,10 +99,11 @@ function renderLicenseSection(license) {
     default:
       text = "";
   }
-
+  // if no license chosen then the license section is not created, empty string returned instead
   if (text === "") {
     return text;
   } else {
+    // creates markdown for license section - text, and link to more info about license
     return`
 
   ## License
@@ -110,9 +114,10 @@ function renderLicenseSection(license) {
 
 // TODO: Create a function to generate markdown for README
 function generateMarkdown(data) {
-  //console.log(`Title: ${data.title}`);
+  // variables extracted from data object created from user input
   const {title, description, installation, usage, license, contributors, tests, githubUser, email} = data;
-return`
+  // markdown template
+  return`
   # ${title}
 
   ![${license} License](https://img.shields.io/badge/License-${renderLicenseBadge(license)})
@@ -154,4 +159,5 @@ return`
 `;
 };
 
+// export function to make available to index.js
 module.exports = generateMarkdown;
