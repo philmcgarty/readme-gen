@@ -29,7 +29,10 @@ function renderLicenseBadge(license) {
     default: // if user managed to not enter a license an empty string is returned
       badge = "";
   }
-  return badge;
+  if (badge === ""){
+    return "";
+  }
+  return `![${license} License](https://img.shields.io/badge/License-${badge})`;
 };
 
 
@@ -120,7 +123,7 @@ function generateMarkdown(data) {
   return`
   # ${title}
 
-  ![${license} License](https://img.shields.io/badge/License-${renderLicenseBadge(license)})
+  ${renderLicenseBadge(license)}
   
   ## Description
 

@@ -1,11 +1,11 @@
 
-  # Test Project
+  # Phil's Apache proj
 
-  ![BSD License](https://img.shields.io/badge/License-BSD-orange)
+  ![Apache License](https://img.shields.io/badge/License-Apache-yellowgreen)
   
   ## Description
 
-  This is a description of the project
+  this one
 
   ## Table of Contents
   * [Installation](#installation)
@@ -17,27 +17,27 @@
 
   ## Installation
   
-  in root directory type "node index.js"
+  asdd
 
   ## Usage
 
-  instructions
+  asdsad
   
 
   ## License
   
-  Berkeley Software Distribution License (BSD) - For more information [click here](https://opensource.org/licenses/BSD-3-Clause)
+  The Apache License - For more information [click here](https://opensource.org/licenses/Apache-2.0)
 
   ## Contributing
 
-  no rules so far
+  sdasda
 
   ## Tests
 
-  
+  sadasda
 
   ## Questions
 
-  [GitHub](https://github.com/philmcgarty)
+  [GitHub](https://github.com/user)
 
-  If you have any questions regarding this project, or require any further information, please email: philmc@email.com
+  If you have any questions regarding this project, or require any further information, please email: @email.com

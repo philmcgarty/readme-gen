@@ -48,7 +48,7 @@ const questions = [
         type: 'list',
         name: 'license',
         message: 'Choose a license type:',
-        choices: ['GPL','Apache','Ms-PL','BSD','CDDL','EPL','MIT'] // found license list on: https://www.whitesourcesoftware.com/resources/blog/open-source-licenses-explained/
+        choices: ['GPL','Apache','Ms-PL','BSD','CDDL','EPL','MIT', 'No License'] // found license list on: https://www.whitesourcesoftware.com/resources/blog/open-source-licenses-explained/
     },
     {   // contributor guidelines
         type: 'input',
